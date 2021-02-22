@@ -1,16 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      body {
+        background-color: powderblue;
+      }
+      header {
+        background-color: #f0f0f0;
+      }
+      div.a {
+        text-align: left;
+        font-size: 24px;
+      }
+      div.b {
+        text-align: right;
+      }
+      div.c {
+        background-color: C0C0C0;
+      }
+      div.d {
+        font-size: 16px
+        max-width: 70%;;
+
+      }
+      div.e {
+        background-color: #F0F0F0;
+      }
+
+      p.blocktext {
+        /* margin-left: auto;
+        margin-right: auto;
+        width: 8em */
+        text-align: centre;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: inline;
+      }
+    </style>
     <meta charset="utf-8" />
     <title>CSS Layouts</title>
   </head>
 
   <body>
-    <span> Hello goodbye </span>
+    <header>
+      <div class="a">Eithel Anderson</div>
 
-    <div>
-      <h1>Welcome</h1>
+      <div class="b">
+        <a href="https://github.com/etelish">
+          <img src="./images/github_icon.svg" alt="github icon" />
+        </a>
+      </div>
+    </header>
+
+    <div class="c">
+      <ul>
+        <li><a href=" http://etelish.github.io/css_layouts/">Home</a></li>
+        <li><a href="https://github.com/etelish">Github</a></li>
+      </ul>
     </div>
-    CSS Layout
+
+    <div class="d">
+      <h1>CSS Layouts</h1>
+      <p class="blocktext">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida
+        imperdiet justo eget mollis. Etiam vel odio vitae ex faucibus tempus.
+        Quisque egestas nibh sed neque vehicula hendrerit. Sed ac tempor arcu.
+        Fusce vitae lectus condimentum, sollicitudin elit at, laoreet ipsum.
+        Cras auctor ornare ultricies. Duis eget turpis lacus. Sed tincidunt
+        sapien ac lacinia feugiat. Donec dictum congue feugiat. Etiam tempus
+        tincidunt convallis. Etiam ornare velit quam, id viverra ante laoreet
+        vitae. Fusce libero justo, vehicula vitae euismod nec, pulvinar a orci.
+        Duis arcu justo, eleifend vel mattis in, vulputate quis tortor.
+        Pellentesque sem nisi, rutrum vitae ex a, tempus ornare arcu. Nam sed
+        eleifend risus, quis ornare neque. Cras ultrices non libero vitae
+        varius. Curabitur vitae maximus nunc, sed convallis mauris. Praesent
+        facilisis cursus orci sed mattis. Ut interdum ipsum massa, sed rutrum
+        tortor rutrum vel. Etiam eget tincidunt metus. Etiam mi neque, mattis
+        sed ligula quis, viverra faucibus dolor. Donec massa nisi, auctor
+        scelerisque mattis nec, hendrerit vitae elit. Vivamus odio tortor,
+        feugiat in ultricies nec, scelerisque vel arcu.
+      </p>
+    </div>
+    <div class="e">
+      <footer>
+        <img src="./images/copyright_symbol.svg" alt="copyright symbol" />
+        <p>Copyright Eithel Anderson 2021</p>
+        <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+      </footer>
+    </div>
   </body>
 </html>
