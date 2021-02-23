@@ -3,7 +3,7 @@
   <head>
     <style>
       body {
-        background-color: powderblue;
+        background-color: white;
       }
       header {
         background-color: #f0f0f0;
@@ -11,20 +11,37 @@
       div.a {
         text-align: left;
         font-size: 24px;
+        padding: 35px;
+        position: relative;
+        right: 16px;
+        /* top: 25px; */
       }
       div.b {
         text-align: right;
+        padding: 0%;
+        position: relative;
+        bottom: 60px;
+        right: 16px;
       }
-      div.c {
-        background-color: C0C0C0;
-      }
-      div.d {
-        font-size: 16px
-        max-width: 70%;;
 
+      div.d {
+        /* border: 1px red solid; */
+        font-size: 16px;
+        max-width: 70%;
+        position: relative;
+        left: 10px;
       }
       div.e {
-        background-color: #F0F0F0;
+        text-align: left;
+        position: relative;
+        left: 10px;
+      }
+
+      div.f {
+        border: 1px red solid;
+        position: absolute;
+        width: 95%;
+        text-align: right;
       }
 
       p.blocktext {
@@ -33,13 +50,22 @@
         width: 8em */
         text-align: centre;
       }
+
+      div.navbar {
+        background-color: grey;
+      }
       ul {
         list-style-type: none;
         margin: 0;
-        padding: 0;
+        padding-left: 20px;
       }
       li {
         display: inline;
+        padding-right: 20px;
+      }
+      footer {
+        background-color: grey;
+        height: 27px;
       }
     </style>
     <meta charset="utf-8" />
@@ -57,7 +83,7 @@
       </div>
     </header>
 
-    <div class="c">
+    <div class="navbar">
       <ul>
         <li><a href=" http://etelish.github.io/css_layouts/">Home</a></li>
         <li><a href="https://github.com/etelish">Github</a></li>
@@ -86,12 +112,14 @@
         feugiat in ultricies nec, scelerisque vel arcu.
       </p>
     </div>
-    <div class="e">
-      <footer>
-        <img src="./images/copyright_symbol.svg" alt="copyright symbol" />
-        <p>Copyright Eithel Anderson 2021</p>
-        <p><a href="mailto:hege@example.com">hege@example.com</a></p>
-      </footer>
-    </div>
+
+    <footer>
+      <div class="e">
+        <p>&copy; Copyright Eithel Anderson 2021</p>
+      </div>
+      <div class="f">
+        <p><a href="https://github.com/etelish">Github</a></p>
+      </div>
+    </footer>
   </body>
 </html>
