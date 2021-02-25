@@ -1,55 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta charset="utf-8" />
+    <title>CSS Layouts</title>
+
     <style>
+      html,
+      body,
+      div,
+      span,
+      applet,
+      object,
+      iframe,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      p,
+      blockquote,
+      pre,
+      a,
+      abbr,
+      acronym,
+      address,
+      big,
+      cite,
+      code,
+      del,
+      dfn,
+      em,
+      img,
+      ins,
+      kbd,
+      q,
+      s,
+      samp,
+      small,
+      strike,
+      strong,
+      sub,
+      sup,
+      tt,
+      var,
+      b,
+      u,
+      i,
+      center,
+      dl,
+      dt,
+      dd,
+      ol,
+      ul,
+      li,
+      fieldset,
+      form,
+      label,
+      legend,
+      table,
+      caption,
+      tbody,
+      tfoot,
+      thead,
+      tr,
+      th,
+      td,
+      article,
+      aside,
+      canvas,
+      details,
+      embed,
+      figure,
+      figcaption,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      output,
+      ruby,
+      section,
+      summary,
+      time,
+      mark,
+      audio,
+      video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+      }
+      /* HTML5 display-role reset for older browsers */
+      article,
+      aside,
+      details,
+      figcaption,
+      figure,
+      footer,
+      header,
+      hgroup,
+      menu,
+      nav,
+      section {
+        display: block;
+      }
+      body {
+        line-height: 1;
+      }
+      ol,
+      ul {
+        list-style: none;
+      }
+      blockquote,
+      q {
+        quotes: none;
+      }
+      blockquote:before,
+      blockquote:after,
+      q:before,
+      q:after {
+        content: "";
+        content: none;
+      }
+      table {
+        border-collapse: collapse;
+        border-spacing: 0;
+      }
+    </style>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      :root {
+        --main-header-color: #f0f0f0;
+      }
       body {
         background-color: white;
       }
       header {
-        background-color: #f0f0f0;
+        background-color: var(--main-header-color);
         height: 66px;
+        padding: 0px 20px;
+        position: relative;
       }
-      div.a {
-        text-align: left;
+      .headerTitle {
         font-size: 24px;
-        padding: 35px;
-        position: relative;
-        right: 16px;
-        /* top: 25px; */
+        position: absolute;
+        bottom: 18px;
       }
-      div.b {
-        text-align: right;
-        padding: 0%;
-        position: relative;
-        bottom: 60px;
+
+      .headerLogo {
+        position: absolute;
+        bottom: 17px;
         right: 16px;
       }
 
-      div.d {
-        /* border: 1px red solid; */
+      .contentTitle {
+        position: relative;
+        bottom: 21px;
+        /* top: -45px; */
+        font-weight: bold;
+      }
+
+      .contentPosition {
         font-size: 16px;
         max-width: 70%;
         position: relative;
-        left: 10px;
+        padding: 6% 15%;
       }
-      div.e {
+      .footerPosition {
         text-align: left;
         position: relative;
         left: 10px;
+        bottom: -5px;
       }
 
-      div.f {
-        border: 1px red solid;
+      .footerGithubText {
         position: absolute;
-        width: 95%;
-        text-align: right;
+        top: 5px;
+        right: 17px;
       }
 
       p.blocktext {
-        /* margin-left: auto;
-        margin-right: auto;
-        width: 8em */
-        text-align: centre;
+        position: absolute;
+        top: 49px;
       }
 
       div.navbar {
@@ -65,30 +204,28 @@
         text-align: left;
       }
       li {
-        border: 1px red solid;
         font-size: 17px;
-
         display: inline;
         padding-right: 20px;
       }
       footer {
         background-color: #d3d3d3;
         height: 27px;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
       }
     </style>
-    <meta charset="utf-8" />
-    <title>CSS Layouts</title>
   </head>
 
   <body>
     <header>
-      <div class="a">Eithel Anderson</div>
+      <h1 class="headerTitle">Eithel Anderson</h1>
 
-      <div class="b">
-        <a href="https://github.com/etelish">
-          <img src="./images/github_icon.svg" alt="github icon" />
-        </a>
-      </div>
+      <a class="headerLogo" href="https://github.com/etelish">
+        <img src="./images/github_icon.svg" alt="github icon" />
+      </a>
     </header>
 
     <div class="navbar">
@@ -98,9 +235,9 @@
       </ul>
     </div>
 
-    <div class="d">
-      <h1>CSS Layouts</h1>
-      <p class="blocktext">
+    <div class="contentPosition">
+      <h1 class="contentTitle">CSS Layouts</h1>
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam gravida
         imperdiet justo eget mollis. Etiam vel odio vitae ex faucibus tempus.
         Quisque egestas nibh sed neque vehicula hendrerit. Sed ac tempor arcu.
@@ -122,16 +259,10 @@
     </div>
 
     <footer>
-      <div class="e">
-        <ul>
-          <li>&copy; Copyright Eithel Anderson 2021</li>
-          <li>
-            <a href="https://github.com/etelish">Github</a>
-          </li>
-        </ul>
-        <!-- <p>&copy; Copyright Eithel Anderson 2021</p> -->
+      <div class="footerPosition">
+        <p>&copy; Copyright Eithel Anderson 2021</p>
       </div>
-      <div class="f">
+      <div class="footerGithubText">
         <p><a href="https://github.com/etelish">Github</a></p>
       </div>
     </footer>
