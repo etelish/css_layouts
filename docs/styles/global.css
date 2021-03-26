@@ -6,7 +6,7 @@
   --main-header-color: #f0f0f0;
 }
 body {
-  background-color: yellow;
+  background-color: white;
   font-family: Arial, sans-serif;
 }
 header {
@@ -15,14 +15,31 @@ header {
   padding: 0px 20px;
   position: relative;
 }
-@media (min-width: 375px) {
+@media only screen and (max-width: 375px) {
   header {
     background-color: blue;
   }
 
-  body {
-    background-color: pink;
-  }
+  /* body {
+    background-color: black;
+    color: white;
+  } */
+}
+
+/* Dark mode  */
+
+#checkbox:checked + .container {
+  background: rgb(19, 18, 18);
+  color: white;
+}
+
+.container {
+  height: 100vh;
+}
+#checkbox {
+  position: absolute;
+  right: 0;
+  z-index: 1;
 }
 .headerTitle {
   font-size: 24px;
