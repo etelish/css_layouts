@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+header {
+  grid-area: header;
+  background-color: red;
+}
+main {
+  grid-area: main;
+  background-color: skyblue;
+  display: grid;
+}
+.title {
+  grid-area: title;
+  background-color: violet;
+}
+
+.github {
+  grid-area: github;
+  background-color: tomato;
+}
+.nav {
+  grid-area: nav;
+  background-color: yellowgreen;
+}
+body {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 100px 20px 1fr 50px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title github"
+    "nav nav"
+    "main main"
+    "footer footer";
+}
+footer {
+  grid-area: footer;
+  background-color: springgreen;
+}
+nav {
+  grid-area: nav;
+  background-color: teal;
+}
